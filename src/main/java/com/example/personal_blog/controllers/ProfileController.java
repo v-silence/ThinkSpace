@@ -27,6 +27,7 @@ public class ProfileController {
     public String aboutPage( @AuthenticationPrincipal User user, Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("about", user.getAbout());
+        model.addAttribute("age", user.getAge());
         Iterable<Post> posts = postRepository.findByAuthor(user.getUsername());
         List<Post> myList = new ArrayList<>();
         posts.forEach(myList::add);

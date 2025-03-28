@@ -53,5 +53,9 @@ public class Post {
         this.full_text=full_text;
     }
    
+    @Override
+    public String toString() {
+        return "Post{title='" + title + "'}";
+    }
 
 }
