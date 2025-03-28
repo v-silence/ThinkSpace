@@ -23,10 +23,6 @@ public class HomeController {
         int start = Math.max(0, myList.size() - 10); //Вычислите начальный индекс
         myList = myList.subList(start, myList.size()); //Получите подсписок
         Collections.reverse(myList);
-       
-        for(int i=0; i < myList.size();i++){
-            System.out.println(myList.toString());
-        }
         model.addAttribute("posts", myList);
         return "home";
     }
